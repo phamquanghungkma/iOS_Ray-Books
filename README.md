@@ -19,4 +19,9 @@ Raywenderlich Tutorial Team Book's
 
 >## <a name="Ray_RxSwift"></a> Ray_RxSwift
 ### 01_Playgrounds
-Примеры по Observable/Subjects
+Теория по Observable/Subjects
+
+### 02_Combinestagram
+Проект создания коллажей из фото устройства на Rx.
+Photos/BehaviorRelay/PublishSubject/Observable
+
