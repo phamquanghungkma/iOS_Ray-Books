@@ -22,6 +22,6 @@ Raywenderlich Tutorial Team Book's
 Теория по Observable/Subjects
 
 ### 02_Combinestagram
-Проект создания коллажей из фото устройства на Rx.
+Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
 
