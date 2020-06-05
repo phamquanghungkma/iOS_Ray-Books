@@ -19,7 +19,7 @@ Raywenderlich Tutorial Team Book's
 
 >## <a name="Ray_RxSwift"></a> Ray_RxSwift
 ### 01_Playgrounds
-Теория по Observable/Subjects
+Теория по Observable/Subjects/Operators
 
 ### 02_Combinestagram
 Проект создания коллажей из фото устройства на Rx.  
