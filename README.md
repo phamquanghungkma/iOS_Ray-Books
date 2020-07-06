@@ -4,6 +4,7 @@ Raywenderlich Tutorial Team Book's
 + [Ray_SwiftUI by Tutorials](#Ray_SwiftUI)
 + [Ray_Concurrency by Tutorials](#Ray_Concurrency)
 + [Ray_RxSwift](#Ray_RxSwift)
++ [Ray_Auto Layout by Tutorials](#Ray_AutoLayout)
 
 >## <a name="Ray_SwiftUI"></a> Ray_SwiftUI by Tutorials
 ### 01_Bullseye
@@ -25,3 +26,7 @@ Raywenderlich Tutorial Team Book's
 Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
 
+
+>## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
+### 01_MessagingApp
+Основы Auto Layouts and Preview
