@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactPreviewView" customModule="MessagingApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="7Uu-el-ijp"/>
+                <outlet property="nameLabel" destination="sDZ-dK-Lax" id="Y6U-UH-7PB"/>
+                <outlet property="photoImageView" destination="2OX-Bk-xeS" id="A48-W4-bcx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2OX-Bk-xeS">
+                    <rect key="frame" x="35" y="25" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="4GE-to-9QZ"/>
+                        <constraint firstAttribute="width" secondItem="2OX-Bk-xeS" secondAttribute="height" multiplier="1:1" id="Mbz-ue-GDE"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDZ-dK-Lax">
+                    <rect key="frame" x="54" y="115" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sDZ-dK-Lax" firstAttribute="top" secondItem="2OX-Bk-xeS" secondAttribute="bottom" constant="10" id="Fxw-x3-VAx"/>
+                <constraint firstItem="sDZ-dK-Lax" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Rup-It-hg0"/>
+                <constraint firstItem="2OX-Bk-xeS" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="klS-V3-mJv"/>
+                <constraint firstItem="2OX-Bk-xeS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="yDi-BF-Jj1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>

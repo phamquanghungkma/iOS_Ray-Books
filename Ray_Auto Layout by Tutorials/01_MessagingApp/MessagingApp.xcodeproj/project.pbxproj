@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2742D76224B39F9900719495 /* ContactPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2742D76124B39F9900719495 /* ContactPreviewView.xib */; };
+		2742D76424B3A02E00719495 /* ContactPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2742D76324B3A02E00719495 /* ContactPreviewView.swift */; };
 		5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5394F02321864DF4006E754C /* LaunchScreen.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2742D76124B39F9900719495 /* ContactPreviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactPreviewView.xib; sourceTree = "<group>"; };
+		2742D76324B3A02E00719495 /* ContactPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPreviewView.swift; sourceTree = "<group>"; };
 		5394F02421864DF4006E754C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* MessagingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 		EEDF335F225C1854004557A1 /* ContactPreview */ = {
 			isa = PBXGroup;
 			children = (
+				2742D76124B39F9900719495 /* ContactPreviewView.xib */,
+				2742D76324B3A02E00719495 /* ContactPreviewView.swift */,
 			);
 			path = ContactPreview;
 			sourceTree = "<group>";
@@ -172,7 +178,7 @@
 				TargetAttributes = {
 					D2A5F1FF1F4A9144005CD714 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */,
+				2742D76224B39F9900719495 /* ContactPreviewView.xib in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
 				FDEAC5A62233D74A009296BD /* Profile.storyboard in Resources */,
 				EE4EAC43223512C500C522EE /* Contacts.storyboard in Resources */,
@@ -217,6 +224,7 @@
 				FDEAC5A82233D755009296BD /* ProfileImageView.swift in Sources */,
 				FD16E8A62233C21A0000045B /* ProfileViewController.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
+				2742D76424B3A02E00719495 /* ContactPreviewView.swift in Sources */,
 				EE4EAC4B2235420000C522EE /* ContactTableViewCell.swift in Sources */,
 				EE4EAC452235140400C522EE /* ContactListTableViewController.swift in Sources */,
 				FDEAC5AA22342404009296BD /* ProfileNameLabel.swift in Sources */,
@@ -364,7 +372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.MessagingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,7 +391,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.MessagingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
