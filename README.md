@@ -29,4 +29,6 @@ Photos/BehaviorRelay/PublishSubject/Observable
 
 >## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
 ### 01_MessagingApp
-Основы Auto Layouts and Preview
+Основы Auto Layouts and Preview 
+ContactPreviewView.xib - использование в проекте независимых видов 
+Challenge. Profile.storyboard - проставить Constraints 
