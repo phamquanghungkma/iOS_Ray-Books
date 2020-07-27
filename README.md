@@ -15,6 +15,9 @@ Raywenderlich Tutorial Team Book's
 ### 02_DispatchGroups
 Работа с DispatchGroups and Semaphores
 
+### 03_Priority Inversion
+Priority Inversion Problem
+
 <br />
 <br />
 
