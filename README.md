@@ -9,7 +9,8 @@ Raywenderlich Tutorial Team Book's
 <br />
 
 >## <a name="Ray_Concurrency"></a> Ray_Concurrency by Tutorials
-Работа с GCD и Operations. Несколько небольших приложений по данной теме
+### 01_Concurrency
+Загрузка изображений и асинхронное обновление CollectionView
 
 <br />
 <br />

@@ -106,7 +106,8 @@ extension CollectionViewController {
       cell.display(image: nil)
     }*/
     cell.display(image: nil)
-    downloadWithGlobalQueue(at: indexPath)
+    //downloadWithGlobalQueue(at: indexPath)
+    downloadWithUrlSession(at: indexPath)
 
     return cell
   }
