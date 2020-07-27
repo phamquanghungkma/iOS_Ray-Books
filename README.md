@@ -79,3 +79,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 14_Playground
 Создание обьектов в Playground
+
+### 15_ExternalDisplay
+Адаптация под внешний Display
