@@ -82,3 +82,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 15_ExternalDisplay
 Адаптация под внешний Display
+
+### 16_CustomControl
+Custom элементы
