@@ -46,3 +46,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 06_LayoutGuides
 Используем Layout Guides with Code
+
+### 07_HuggingAndResistance
+Приоритеты Constraints
