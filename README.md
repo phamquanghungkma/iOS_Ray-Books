@@ -24,9 +24,9 @@ Raywenderlich Tutorial Team Book's
 
 ### 02_Combinestagram
 Проект создания коллажей из фото устройства на Rx.  
-Photos/BehaviorRelay/PublishSubject/Observable
-
-__
+Photos/BehaviorRelay/PublishSubject/Observable\
+\
+\
 >## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
 ### 01_Xib
 Основы Auto Layout and Preview   
