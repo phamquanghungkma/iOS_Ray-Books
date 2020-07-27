@@ -73,3 +73,7 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 12_Issues
 Ошибки при работе с Constraints
+
+### 13_Optimizing
+Оптимизация Constraints
+
