@@ -67,3 +67,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 10_DynamicType
 Адаптация текста приложения c Dynamic Type
+
+### 11_Localization
+Адаптация отображения при локализации
