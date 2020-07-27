@@ -10,11 +10,14 @@
 		5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5394F02321864DF4006E754C /* LaunchScreen.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
+		EE5E6117232C0A38007B974C /* LeftMessageImageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5E6116232C0A38007B974C /* LeftMessageImageBubbleTableViewCell.swift */; };
 		EE7413032236C6FD001C7894 /* MessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7413022236C6FD001C7894 /* MessageBubbleTableViewCell.swift */; };
 		EE7413052236CDF6001C7894 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7413042236CDF6001C7894 /* MessagesTableViewController.swift */; };
 		EE7413082236CE5E001C7894 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7413072236CE5E001C7894 /* Message.swift */; };
-		EED53B87232C819700D55144 /* RightMessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED53B85232C819600D55144 /* RightMessageBubbleTableViewCell.swift */; };
-		EED53B88232C819700D55144 /* LeftMessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED53B86232C819700D55144 /* LeftMessageBubbleTableViewCell.swift */; };
+		EED53B7A232C760900D55144 /* RightMessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED53B79232C760900D55144 /* RightMessageBubbleTableViewCell.swift */; };
+		EED53B7C232C784500D55144 /* LeftMessageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED53B7B232C784500D55144 /* LeftMessageBubbleTableViewCell.swift */; };
+		EED53B7F232C798500D55144 /* ImageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED53B7E232C798500D55144 /* ImageBubbleTableViewCell.swift */; };
+		EED53B81232C7BF500D55144 /* RightMessageImageBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED53B80232C7BF500D55144 /* RightMessageImageBubbleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +26,14 @@
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE5E6116232C0A38007B974C /* LeftMessageImageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessageImageBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		EE7413022236C6FD001C7894 /* MessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		EE7413042236CDF6001C7894 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		EE7413072236CE5E001C7894 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		EED53B85232C819600D55144 /* RightMessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightMessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
-		EED53B86232C819700D55144 /* LeftMessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftMessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		EED53B79232C760900D55144 /* RightMessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		EED53B7B232C784500D55144 /* LeftMessageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		EED53B7E232C798500D55144 /* ImageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		EED53B80232C7BF500D55144 /* RightMessageImageBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessageImageBubbleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 				FD37A7FF2234BFC000387AB6 /* App */,
 				FD37A8272234D0C000387AB6 /* Controllers */,
 				FD37A8292234D0C000387AB6 /* Views */,
+				FD37A8262234D0C000387AB6 /* User Profile */,
 			);
 			path = MessagingApp;
 			sourceTree = "<group>";
@@ -77,10 +84,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		EED53B84232C818A00D55144 /* Base */ = {
+		EED53B7D232C796600D55144 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				EE7413022236C6FD001C7894 /* MessageBubbleTableViewCell.swift */,
+				EED53B7E232C798500D55144 /* ImageBubbleTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -96,6 +104,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		FD37A8262234D0C000387AB6 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "User Profile";
+			sourceTree = "<group>";
+		};
 		FD37A8272234D0C000387AB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,9 +122,11 @@
 		FD37A8292234D0C000387AB6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EED53B84232C818A00D55144 /* Base */,
-				EED53B86232C819700D55144 /* LeftMessageBubbleTableViewCell.swift */,
-				EED53B85232C819600D55144 /* RightMessageBubbleTableViewCell.swift */,
+				EED53B7D232C796600D55144 /* Base */,
+				EE5E6116232C0A38007B974C /* LeftMessageImageBubbleTableViewCell.swift */,
+				EED53B79232C760900D55144 /* RightMessageBubbleTableViewCell.swift */,
+				EED53B7B232C784500D55144 /* LeftMessageBubbleTableViewCell.swift */,
+				EED53B80232C7BF500D55144 /* RightMessageImageBubbleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,11 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED53B7F232C798500D55144 /* ImageBubbleTableViewCell.swift in Sources */,
 				EE7413032236C6FD001C7894 /* MessageBubbleTableViewCell.swift in Sources */,
-				EED53B87232C819700D55144 /* RightMessageBubbleTableViewCell.swift in Sources */,
-				EED53B88232C819700D55144 /* LeftMessageBubbleTableViewCell.swift in Sources */,
+				EE5E6117232C0A38007B974C /* LeftMessageImageBubbleTableViewCell.swift in Sources */,
+				EED53B7A232C760900D55144 /* RightMessageBubbleTableViewCell.swift in Sources */,
+				EED53B81232C7BF500D55144 /* RightMessageImageBubbleTableViewCell.swift in Sources */,
 				EE7413052236CDF6001C7894 /* MessagesTableViewController.swift in Sources */,
 				EE7413082236CE5E001C7894 /* Message.swift in Sources */,
+				EED53B7C232C784500D55144 /* LeftMessageBubbleTableViewCell.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

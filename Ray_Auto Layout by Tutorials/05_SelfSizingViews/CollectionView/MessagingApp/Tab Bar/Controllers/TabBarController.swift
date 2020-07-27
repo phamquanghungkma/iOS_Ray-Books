@@ -26,26 +26,42 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+final class TabBarController: UITabBarController {
+  // MARK: - Properties
+  private let contactsNavigationController = NavigationController(tabBar: .contacts)
+  private let profileNavigationController = NavigationController(tabBar: .profile)
+  private let messagingNavigationController = NavigationController(tabBar: .messages)
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  // MARK: - Life Cycles
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    embedViewControllers()
+  }
+  
+  // MARK: - UI
+  private func embedViewControllers() {
+    viewControllers = [
+      messagingNavigationController,
+      contactsNavigationController,
+      profileNavigationController]
+  }
+}
+
+fileprivate final class NavigationController: UINavigationController {
+  // MARK: - Initializers
+  init(tabBar: TabBar) {
+    super.init(rootViewController: tabBar.viewController)
+    tabBarItem.title = tabBar.title
+    tabBarItem.image = tabBar.image
+  }
+  
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
   }
 }

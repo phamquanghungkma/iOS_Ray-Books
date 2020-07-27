@@ -26,26 +26,38 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+final class ProfileNameLabel: UILabel {
+  // MARK: - Properties
+  override var text: String? {
+    didSet {
+      guard let words = text?
+        .components(separatedBy: .whitespaces)
+        else { return }
+      let joinedWords = words.joined(separator: "\n")
+      guard text != joinedWords else { return }
+      DispatchQueue.main.async { [weak self] in
+        self?.text = joinedWords
+      }
+    }
+  }
+
+  // MARK: - Initializers
+  init(fullName: String? = "Full Name") {
+    super.init(frame: .zero)
+    setTextAttributes()
+    text = fullName
+  }
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+  }
+
+  // MARK: - Setup Views
+  private func setTextAttributes() {
+    numberOfLines = 0
+    textAlignment = .center
+    font = UIFont.boldSystemFont(ofSize: 24)
   }
 }

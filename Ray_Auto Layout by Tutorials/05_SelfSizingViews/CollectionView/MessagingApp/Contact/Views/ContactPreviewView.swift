@@ -26,26 +26,47 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+@IBDesignable final class ContactPreviewView: UIView {
+  private let photoImageView: UIImageView = {
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "rw-logo"))
+    return imageView
+  }()
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  let nameLabel: UILabel = {
+    let label = UILabel()
+    label.font = UIFont.systemFont(ofSize: 13)
+    label.textAlignment = .center
+    return label
+  }()
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    backgroundColor = UIColor(named: "rw-light")
+    setupViewLayout()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    setupViewLayout()
+  }
+  
+  private func setupViewLayout() {
+    addSubview(photoImageView)
+    photoImageView.translatesAutoresizingMaskIntoConstraints = false
+    
+    addSubview(nameLabel)
+    nameLabel.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate(
+      [photoImageView.widthAnchor.constraint(equalTo: photoImageView.heightAnchor),
+       photoImageView.widthAnchor.constraint(equalToConstant: 80),
+       photoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+       photoImageView.topAnchor.constraint(equalTo: topAnchor, constant: 25),
+       
+       nameLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9),
+       nameLabel.centerXAnchor.constraint(equalTo: photoImageView.centerXAnchor),
+       nameLabel.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 8)])
   }
 }

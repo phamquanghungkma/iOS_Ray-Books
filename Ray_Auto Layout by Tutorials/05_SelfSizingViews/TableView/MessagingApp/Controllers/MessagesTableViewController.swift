@@ -33,7 +33,6 @@ class MessagesTableViewController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = "Messages"
     
     configureTableView()
   }
@@ -46,6 +45,13 @@ class MessagesTableViewController: UITableViewController {
     tableView.register(
       LeftMessageBubbleTableViewCell.self,
       forCellReuseIdentifier: MessageBubbleCellType.leftText.rawValue)
+    tableView.register(
+      RightMessageImageBubbleTableViewCell.self,
+      forCellReuseIdentifier: ImageBubbleCellType.rightImageText.rawValue)
+    tableView.register(
+      LeftMessageImageBubbleTableViewCell.self,
+      forCellReuseIdentifier: ImageBubbleCellType.leftImageText.rawValue)
+    
     tableView.separatorStyle = .none
     tableView.rowHeight = UITableView.automaticDimension
   }
@@ -56,23 +62,43 @@ class MessagesTableViewController: UITableViewController {
   }
   
   override  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //1
     let message = messages[indexPath.row]
     
-    var cell: MessageBubbleTableViewCell
-    if message.sentByMe {
-      cell = tableView.dequeueReusableCell(
-        withIdentifier: MessageBubbleCellType.rightText.rawValue,
-        for: indexPath) as! RightMessageBubbleTableViewCell
+    if message.imageName != nil {
+      var cell: ImageBubbleTableViewCell
+      if message.sentByMe {
+        cell = tableView.dequeueReusableCell(
+          withIdentifier: ImageBubbleCellType.rightImageText.rawValue,
+          for: indexPath) as! RightMessageImageBubbleTableViewCell
+      }
+      else {
+        cell = tableView.dequeueReusableCell(
+          withIdentifier: ImageBubbleCellType.leftImageText.rawValue,
+          for: indexPath) as! LeftMessageImageBubbleTableViewCell
+      }
+      
+      if let imageName = message.imageName {
+        cell.messageImage.image = UIImage(named: imageName)
+      }
+      
+      cell.messageLabel.text = message.text
+      return cell
     }
     else {
-      cell = tableView.dequeueReusableCell(
-        withIdentifier: MessageBubbleCellType.leftText.rawValue,
-        for: indexPath) as! LeftMessageBubbleTableViewCell
+      var cell: MessageBubbleTableViewCell
+      if message.sentByMe {
+        cell = tableView.dequeueReusableCell(
+          withIdentifier: MessageBubbleCellType.rightText.rawValue,
+          for: indexPath) as! RightMessageBubbleTableViewCell
+      }
+      else {
+        cell = tableView.dequeueReusableCell(
+          withIdentifier: MessageBubbleCellType.leftText.rawValue,
+          for: indexPath) as! LeftMessageBubbleTableViewCell
+      }
+      
+      cell.messageLabel.text = message.text
+      return cell
     }
-    
-    cell.messageLabel.text = message.text
-    
-    return cell
   }
 }

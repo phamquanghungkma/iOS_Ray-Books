@@ -28,30 +28,36 @@
 
 import UIKit
 
-class LeftMessageBubbleTableViewCell: MessageBubbleTableViewCell {
-  private let blueBubbleImageName = "blue-bubble"
+class RightMessageImageBubbleTableViewCell: ImageBubbleTableViewCell {
+  private let greenBubbleImageName = "green-bubble"
   
   override func configureLayout() {
     super.configureLayout()
+    
     NSLayoutConstraint.activate([
       //1
       contentView.topAnchor.constraint(equalTo: bubbleImageView.topAnchor, constant: -10),
-      contentView.trailingAnchor.constraint(greaterThanOrEqualTo: bubbleImageView.trailingAnchor, constant: 20),
+      contentView.trailingAnchor.constraint(equalTo: bubbleImageView.trailingAnchor, constant: 20),
       contentView.bottomAnchor.constraint(equalTo: bubbleImageView.bottomAnchor, constant: 10),
-      contentView.leadingAnchor.constraint(equalTo: bubbleImageView.leadingAnchor, constant: -20),
+      contentView.leadingAnchor.constraint(lessThanOrEqualTo: bubbleImageView.leadingAnchor, constant: -20),
       //2
-      bubbleImageView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -5),
-      bubbleImageView.trailingAnchor.constraint(equalTo: messageLabel.trailingAnchor, constant: 10),
-      bubbleImageView.bottomAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 5),
-      bubbleImageView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -20)
+      bubbleImageView.topAnchor.constraint(equalTo: messageImage.topAnchor, constant: -10),
+      bubbleImageView.trailingAnchor.constraint(equalTo: messageImage.trailingAnchor, constant: 20),
+      bubbleImageView.leadingAnchor.constraint(equalTo: messageImage.leadingAnchor, constant: -10),
+      
+      messageImage.heightAnchor.constraint(equalToConstant: 150),
+      messageImage.widthAnchor.constraint(equalToConstant: 150),
+      
+      messageLabel.topAnchor.constraint(equalTo: messageImage.bottomAnchor, constant: 10),
+      messageLabel.trailingAnchor.constraint(equalTo: messageImage.trailingAnchor),
+      messageLabel.bottomAnchor.constraint(equalTo: bubbleImageView.bottomAnchor, constant: -5),
+      messageLabel.leadingAnchor.constraint(equalTo: messageImage.leadingAnchor)
     ])
     
-    //3
-    let insets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 10)
-    //4
-    let image = UIImage(named: blueBubbleImageName)!
+    let insets = UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 20)
+    let image = UIImage(named: greenBubbleImageName)!
       .imageFlippedForRightToLeftLayoutDirection()
-    //5
+    
     bubbleImageView.image = image.resizableImage(
       withCapInsets: insets, resizingMode: .stretch)
   }

@@ -26,26 +26,50 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+enum TabBar: String {
+  case contacts
+  case profile
+  case messages
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  var viewController: UIViewController {
+    let viewController: UIViewController
+    switch self {
+    case .contacts:
+      viewController = ContactListTableViewController()
+    case .profile:
+      viewController = ProfileViewController()
+    case .messages:
+      viewController = MessagesViewController()
+    }
+    viewController.title = title
+    return viewController
+  }
+  
+  var title: String {
+    switch self {
+    case .contacts:
+      return "Contacts"
+    case .profile:
+      return "Profile"
+    case .messages:
+      return "Messages"
+    }
+  }
+  
+  var image: UIImage {
+    let systemName: String
+    switch self {
+    case .contacts:
+      systemName = "person.3.fill"
+    case .profile:
+      systemName = "person.fill"
+    case .messages:
+      systemName = "message.fill"
+    }
+    guard let image = UIImage(systemName: systemName)
+      else { fatalError("Unable to retrieve system image: \(systemName).")}
+    return image
   }
 }

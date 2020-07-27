@@ -26,26 +26,72 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+enum BorderShape: String {
+  case circle
+  case squircle
+  case none
+}
+
+final class ProfileImageView: UIImageView {
+  // MARK: - Properties
+  let boldBorder: Bool
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  var hasBorder: Bool = false {
+    didSet {
+      guard hasBorder else { return layer.borderWidth = 0 }
+      layer.borderWidth = boldBorder ? 10 : 2
+    }
+  }
+  
+  private let borderShape: BorderShape
+  
+  // MARK: - Initializers
+  convenience init() {
+    self.init(borderShape: .none)
+  }
+  
+  init(borderShape: BorderShape, boldBorder: Bool = false) {
+    self.borderShape = borderShape
+    self.boldBorder = boldBorder
+    super.init(frame: CGRect.zero)
+    commonInit()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    borderShape = .none
+    boldBorder = false
+    super.init(coder: aDecoder)
+    commonInit()
+  }
+  
+  private func commonInit() {
+    backgroundColor = .lightGray
+    contentMode = .scaleAspectFit
+    clipsToBounds = true
+//    layer.masksToBounds = true
+  }
+  
+  // MARK: - Layouts
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setupBorderShape()
+  }
+  
+  private func setupBorderShape() {
+    hasBorder = borderShape != .none
+    let width = bounds.size.width
+    let divisor: CGFloat
+    switch borderShape {
+    case .circle:
+      divisor = 2
+    case .squircle:
+      divisor = 4
+    case .none:
+      divisor = width
+    }
+    let cornerRadius = width / divisor
+    layer.cornerRadius = cornerRadius
   }
 }

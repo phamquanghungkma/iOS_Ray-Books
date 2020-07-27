@@ -26,26 +26,51 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+final class MessagesViewController: UIViewController {
+  // MARK: - Properties
+  private let userStories = [
+    UserStory(username: .swift),
+    UserStory(username: .android),
+    UserStory(username: .dog)]
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  private lazy var miniStoryView = MiniStoryView(userStories: userStories)
+  
+  // MARK: - Life cycles
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    view.backgroundColor = .white
+    setupMiniStoryView()
+  }
+  
+  // MARK: - Layouts
+  private func setupMiniStoryView() {
+    view.addSubview(miniStoryView)
+    miniStoryView.backgroundColor = .lightGray
+    miniStoryView.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate(
+      [miniStoryView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+       miniStoryView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+       miniStoryView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+       miniStoryView.heightAnchor.constraint(equalToConstant: 80)]
+    )
+    miniStoryView.delegate = self
+  }
+  
+}
+
+// MARK: - MiniStoryViewDelegate
+extension MessagesViewController: MiniStoryViewDelegate {
+  func didSelectUserStory(atIndex index: Int) {
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else { return }
+      let userStory = self.userStories[index]
+      let viewController = UserStoryViewController(userStory: userStory)
+      let navigationController = UINavigationController(
+        rootViewController: viewController)
+      navigationController.modalPresentationStyle = .fullScreen
+      self.present(navigationController, animated: true)
+    }
   }
 }

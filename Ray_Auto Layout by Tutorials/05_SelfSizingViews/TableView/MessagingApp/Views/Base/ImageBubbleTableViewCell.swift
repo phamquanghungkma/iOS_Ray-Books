@@ -26,26 +26,29 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+enum ImageBubbleCellType: String {
+  case rightImageText
+  case leftImageText
+}
+
+class ImageBubbleTableViewCell: MessageBubbleTableViewCell {
+  lazy var messageImage: UIImageView = {
+    let image = UIImageView()
+    image.contentMode = ContentMode.scaleAspectFill
+    image.clipsToBounds = true
+    image.translatesAutoresizingMaskIntoConstraints = false
+    image.layer.cornerRadius = 5
+    image.layer.borderWidth = 1.0
+    image.layer.borderColor = UIColor.lightGray.cgColor
+    image.backgroundColor = .white
+    
+    return image
+  }()
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  override func configureLayout() {
+    super.configureLayout()
+    contentView.addSubview(messageImage)
   }
 }

@@ -26,26 +26,39 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-struct Message {
-  var text: String
-  var sentByMe: Bool
-  var imageName: String?
+final class ContactTableViewCell: UITableViewCell {
+  // MARK: - Properties
+  var nameLabel: UILabel!
   
-  static func fetchAll() -> [Message] {
-    var messages = [Message]()
-    messages.append(Message(text: "Hello, it's me Libranner", sentByMe: true, imageName: "selfie"))
-    messages.append(Message(
-      text: "I was wondering if you'll like to meet, to go over this new tutorial I'm working on",
-      sentByMe: true,
-      imageName: nil))
-    messages.append(Message(
-      text: "I'm in California now, but we can meet tomorrow morning, at your house",
-      sentByMe: false,
-      imageName: nil))
-    messages.append(Message(text: "Sound good! Talk to you later", sentByMe: true, imageName: nil))
-    messages.append(Message(text: ":]", sentByMe: false, imageName: "ok"))
-    return messages
+  // MARK: - Initializers
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+    commonInit()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    commonInit()
+  }
+  
+  private func commonInit() {
+    setupUI()
+  }
+  
+  // MARK: - Layout
+  private func setupUI() {
+    self.accessoryType = .detailButton
+    
+    nameLabel = UILabel(frame: .zero)
+    nameLabel.font = UIFont.systemFont(ofSize: 13)
+    nameLabel.translatesAutoresizingMaskIntoConstraints = false
+    contentView.addSubview(nameLabel)
+    
+    NSLayoutConstraint.activate(
+      [nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 48),
+       nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+       nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)])
   }
 }
