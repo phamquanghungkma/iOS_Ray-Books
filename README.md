@@ -64,3 +64,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 09_AdaptiveLayout
 Работа с Size Classes
+
+### 10_DynamicType
+Адаптация текста приложения c Dynamic Type
