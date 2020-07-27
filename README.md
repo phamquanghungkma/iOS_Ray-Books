@@ -25,9 +25,11 @@ Raywenderlich Tutorial Team Book's
 ### 02_Combinestagram
 Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
+
 <br />
 <br />
 <br />
+
 >## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
 ### 01_Xib
 Основы Auto Layout and Preview   
@@ -53,3 +55,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 08_Animation
 Анимация изменения Constraints
+
+### 09_AdaptiveLayout
+Работа с Size Classes
