@@ -5,6 +5,9 @@ Raywenderlich Tutorial Team Book's
 + [Ray_Concurrency by Tutorials](#Ray_Concurrency)
 + [Ray_RxSwift](#Ray_RxSwift)
 + [Ray_Auto Layout by Tutorials](#Ray_AutoLayout)
+<br />
+<br />
+<br />
 
 >## <a name="Ray_SwiftUI"></a> Ray_SwiftUI by Tutorials
 ### 01_Bullseye
@@ -12,11 +15,15 @@ Raywenderlich Tutorial Team Book's
 
 ### 02_Checklist
 Работаем со списками и сохранением информации
-
+<br />
+<br />
+<br />
 
 >## <a name="Ray_Concurrency"></a> Ray_Concurrency by Tutorials
 Работа с GCD и Operations. Несколько небольших приложений по данной теме
-
+<br />
+<br />
+<br />
 
 >## <a name="Ray_RxSwift"></a> Ray_RxSwift
 ### 01_Playgrounds
@@ -25,7 +32,6 @@ Raywenderlich Tutorial Team Book's
 ### 02_Combinestagram
 Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
-
 <br />
 <br />
 <br />
