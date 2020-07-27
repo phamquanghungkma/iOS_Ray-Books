@@ -70,3 +70,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 11_Localization
 Адаптация отображения при локализации
+
+### 12_Issues
+Ошибки при работе с Constraints
