@@ -43,3 +43,6 @@ ContactPreviewView.xib - использование в проекте незав
 
 ### 05_SelfSizingViews
 Создаем Collection View and Table View with Code
+
+### 06_LayoutGuides
+Используем Layout Guides with Code
