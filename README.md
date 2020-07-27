@@ -12,13 +12,15 @@ Raywenderlich Tutorial Team Book's
 ### 01_Concurrency
 Загрузка изображений и асинхронное обновление CollectionView
 
+### 02_DispatchGroups
+Работа с DispatchGroups and Semaphores
+
 <br />
 <br />
 
 >## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
 ### 01_Xib
-Основы Auto Layout and Preview   
-ContactPreviewView.xib - использование в проекте независимых видов
+Основы Auto Layout and Preview. Использование в проекте независимых видов
 
 ### 02_StackView
 Работа со StackView with Auto Layout
