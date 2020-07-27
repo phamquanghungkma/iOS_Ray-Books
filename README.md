@@ -29,11 +29,14 @@ Photos/BehaviorRelay/PublishSubject/Observable
 
 >## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
 ### 01_Xib
-Основы Auto Layouts and Preview   
+Основы Auto Layout and Preview   
 ContactPreviewView.xib - использование в проекте независимых видов
 
 ### 02_StackView
-Работа со StackView
+Работа со StackView with Auto Layout
 
 ### 03_CodeAutoLayouts
 Создаем Constraints with Code
+
+### 04_ScrollView
+Создаем Scroll View with Code
