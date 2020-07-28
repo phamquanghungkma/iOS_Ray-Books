@@ -18,6 +18,15 @@ Raywenderlich Tutorial Team Book's
 ### 03_Priority Inversion
 Priority Inversion Problem
 
+### 04_Operations
+Приложение с фильтрами на принципах Operations
+
+### 05_CoreData
+Многопоточность и CoreData
+
+### 06_Sanitizer
+Анализируем потоки
+
 <br />
 <br />
 
