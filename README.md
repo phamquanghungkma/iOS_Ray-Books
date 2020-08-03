@@ -99,6 +99,9 @@ Push уведомления c помощью PushNotifications from GitHub
 ### 05_CommonScenarios
 Foreground/Tapping/Silent notifications
 
+### 06_CustomActions
+Actions after tapping PUSH message
+
 <br />
 <br />
 
