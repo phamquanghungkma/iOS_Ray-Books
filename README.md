@@ -111,6 +111,9 @@ Actions after tapping PUSH message
 ### 09_CoolCalendar
 Работа с календарем через PUSH
 
+### 10_LocalNotifications
+Локальные уведомления
+
 <br />
 <br />
 
