@@ -102,6 +102,9 @@ Foreground/Tapping/Silent notifications
 ### 06_CustomActions
 Actions after tapping PUSH message
 
+### 07_ModifyingPayload
+Зашифрованные сообщения и Notification Service Extension
+
 <br />
 <br />
 
