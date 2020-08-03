@@ -108,6 +108,9 @@ Actions after tapping PUSH message
 ### 08_CustomInterfaces
 Кастомные уведомления
 
+### 09_CoolCalendar
+Работа с календарем через PUSH
+
 <br />
 <br />
 
