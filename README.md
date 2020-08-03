@@ -96,6 +96,9 @@ Push уведомления c помощью PushNotifications from GitHub
 ### 04_Expanding
 Отправляем Push уведомления c помощью скрипта sendPushes.php
 
+### 05_CommonScenarios
+Foreground/Tapping/Silent notifications
+
 <br />
 <br />
 
