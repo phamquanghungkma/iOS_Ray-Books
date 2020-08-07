@@ -1,10 +1,18 @@
 Raywenderlich Tutorial Team Book's 
 =========================
 
++ [Ray_CoreData](#Ray_CoreData)
 + [Ray_Concurrency by Tutorials](#Ray_Concurrency)
 + [Ray_Auto Layout by Tutorials](#Ray_AutoLayout)
 + [Ray_Push Notifications](#Ray_PushNotifications)
 + [Ray_RxSwift](#Ray_RxSwift)
+
+<br />
+<br />
+
+>## <a name="Ray_CoreData"></a> Ray_CoreData
+### 01_HitList
+Сохраняем и загружаем с помощью CoreData простую сущность
 
 <br />
 <br />
