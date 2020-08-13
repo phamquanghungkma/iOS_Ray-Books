@@ -104,7 +104,7 @@ class ViewController: UIViewController {
 
 
 
-//MARK: - EXTENSION. UITableView
+//MARK: - EXTENSION. TABLEVIEW
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

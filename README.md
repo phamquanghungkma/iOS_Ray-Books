@@ -14,6 +14,11 @@ Raywenderlich Tutorial Team Book's
 ### 01_HitList
 Сохраняем и загружаем с помощью CoreData простую сущность
 
+### 02_BowTies
+Сохраняем и загружаем с помощью CoreData сущности с разными типами данных.   
+Загружаем данные из plist файла   
+Extension для UIColor
+
 <br />
 <br />
 
