@@ -21,8 +21,13 @@ Extension для UIColor
 
 ### 03_DogWalk
 Создаем свой CoreDataStack   
-Взаимосвязи между сущностями. 1 сущность хранит несколько других
+Взаимосвязи между сущностями. 1 сущность хранит несколько других   
 Удаление данных по свайпу в UITableView
+
+### 04_BubbleTeaFinder
+Работа с разными типами NSFetchRequest   
+Фильтрация данных при запросе к CoreData   
+Знакомство с NSBatchUpdateRequest/NSBatchDeleteReques
 
 <br />
 <br />
