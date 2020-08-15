@@ -1,14 +1,14 @@
 Raywenderlich Tutorial Team Book's 
 =========================
 
-+ [Ray_Auto Layout by Tutorials](#Ray_AutoLayout)
-+ [Ray_Concurrency by Tutorials](#Ray_Concurrency)
-+ [Ray_Push Notifications](#Ray_PushNotifications)
++ [Ray_AutoLayout ](#Ray_AutoLayout)
++ [Ray_Concurrency](#Ray_Concurrency)
++ [Ray_PushNotifications](#Ray_PushNotifications)
 
 <br />
 <br />
 
->## <a name="Ray_AutoLayout"></a> Ray_Auto Layout by Tutorials
+>## <a name="Ray_AutoLayout"></a> Ray_AutoLayout
 ### 01_Xib
 Основы Auto Layout and Preview. Использование в проекте независимых видов
 
@@ -60,7 +60,7 @@ Custom элементы
 <br />
 <br />
 
->## <a name="Ray_Concurrency"></a> Ray_Concurrency by Tutorials
+>## <a name="Ray_Concurrency"></a> Ray_Concurrency
 ### 01_Concurrency
 Загрузка изображений и асинхронное обновление CollectionView
 
@@ -82,7 +82,7 @@ Priority Inversion Problem
 <br />
 <br />
 
->## <a name="Ray_PushNotifications"></a> Ray_Push Notifications
+>## <a name="Ray_PushNotifications"></a> Ray_PushNotifications
 ### 01_Test
 Разрешение на push уведомления
 
@@ -116,8 +116,6 @@ Actions after tapping PUSH message
 <br />
 <br />
 
-
-
 Waiting List 
 =========================
 
@@ -139,7 +137,6 @@ Extension для UIColor
 Работа с разными типами NSFetchRequest   
 Фильтрация данных при запросе к CoreData   
 Знакомство с NSBatchUpdateRequest/NSBatchDeleteReques
-
 
 <br />
 <br />
