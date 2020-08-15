@@ -1,55 +1,9 @@
 Raywenderlich Tutorial Team Book's 
 =========================
 
-+ [Ray_CoreData](#Ray_CoreData)
-+ [Ray_Concurrency by Tutorials](#Ray_Concurrency)
 + [Ray_Auto Layout by Tutorials](#Ray_AutoLayout)
++ [Ray_Concurrency by Tutorials](#Ray_Concurrency)
 + [Ray_Push Notifications](#Ray_PushNotifications)
-+ [Ray_RxSwift](#Ray_RxSwift)
-
-<br />
-<br />
-
->## <a name="Ray_CoreData"></a> Ray_CoreData
-### 01_HitList
-Сохраняем и загружаем с помощью CoreData простую сущность
-
-### 02_BowTies
-Сохраняем и загружаем с помощью CoreData сущности с разными типами данных   
-Загружаем данные из plist файла   
-Extension для UIColor
-
-### 03_DogWalk
-Создаем свой CoreDataStack   
-Взаимосвязи между сущностями. 1 сущность хранит несколько других   
-Удаление данных по свайпу в UITableView
-
-### 04_BubbleTeaFinder
-Работа с разными типами NSFetchRequest   
-Фильтрация данных при запросе к CoreData   
-Знакомство с NSBatchUpdateRequest/NSBatchDeleteReques
-
-<br />
-<br />
-
->## <a name="Ray_Concurrency"></a> Ray_Concurrency by Tutorials
-### 01_Concurrency
-Загрузка изображений и асинхронное обновление CollectionView
-
-### 02_DispatchGroups
-Работа с DispatchGroups and Semaphores
-
-### 03_Priority Inversion
-Priority Inversion Problem
-
-### 04_Operations
-Приложение с фильтрами на принципах Operations
-
-### 05_CoreData
-Многопоточность и CoreData
-
-### 06_Sanitizer
-Анализируем потоки
 
 <br />
 <br />
@@ -106,6 +60,28 @@ Custom элементы
 <br />
 <br />
 
+>## <a name="Ray_Concurrency"></a> Ray_Concurrency by Tutorials
+### 01_Concurrency
+Загрузка изображений и асинхронное обновление CollectionView
+
+### 02_DispatchGroups
+Работа с DispatchGroups and Semaphores
+
+### 03_Priority Inversion
+Priority Inversion Problem
+
+### 04_Operations
+Приложение с фильтрами на принципах Operations
+
+### 05_CoreData
+Многопоточность и CoreData
+
+### 06_Sanitizer
+Анализируем потоки
+
+<br />
+<br />
+
 >## <a name="Ray_PushNotifications"></a> Ray_Push Notifications
 ### 01_Test
 Разрешение на push уведомления
@@ -140,6 +116,34 @@ Actions after tapping PUSH message
 <br />
 <br />
 
+
+
+Waiting List 
+=========================
+
+>## <a name="Ray_CoreData"></a> Ray_CoreData
+### 01_HitList
+Сохраняем и загружаем с помощью CoreData простую сущность
+
+### 02_BowTies
+Сохраняем и загружаем с помощью CoreData сущности с разными типами данных   
+Загружаем данные из plist файла   
+Extension для UIColor
+
+### 03_DogWalk
+Создаем свой CoreDataStack   
+Взаимосвязи между сущностями. 1 сущность хранит несколько других   
+Удаление данных по свайпу в UITableView
+
+### 04_BubbleTeaFinder
+Работа с разными типами NSFetchRequest   
+Фильтрация данных при запросе к CoreData   
+Знакомство с NSBatchUpdateRequest/NSBatchDeleteReques
+
+
+<br />
+<br />
+
 >## <a name="Ray_RxSwift"></a> Ray_RxSwift
 ### 01_Playgrounds
 Теория по Observable/Subjects/Operators
@@ -147,3 +151,4 @@ Actions after tapping PUSH message
 ### 02_Combinestagram
 Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
+
