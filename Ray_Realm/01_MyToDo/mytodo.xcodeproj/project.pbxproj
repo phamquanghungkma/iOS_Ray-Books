@@ -131,7 +131,6 @@
 				C6E2278497C28196951ABAA5 /* Pods-MyToDo.debug.xcconfig */,
 				AEFF9891CCF0DF72C914F282 /* Pods-MyToDo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -169,7 +168,7 @@
 				TargetAttributes = {
 					9C7B1B2D200A023700DD0772 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1160;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -410,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.MyToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -428,7 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.MyToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

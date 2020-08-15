@@ -30,29 +30,63 @@ import UIKit
 import RealmSwift
 
 class ToDoListController: UITableViewController {
-
+  
+  private var itemsToken: NotificationToken?
   private var items: Results<ToDoItem>?
 
   // MARK: - ViewController life-cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    items = ToDoItem.all()
+    printAppDocumentsDirectory()
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-
+    itemsToken = items?.observe { changes in
+      //guard let tableView = tableView else { return }
+      switch changes {
+      case .initial(_):
+        self.tableView.reloadData()
+      case .update(_, deletions: let deletions, insertions: let insertions, modifications: let modifications):
+        self.tableView.applyChanges(deletions: deletions, insertions: insertions, updates: modifications)
+      case .error(_):
+        break
+      }
+    }
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-
+    itemsToken?.invalidate()
   }
+  
 
   // MARK: - Actions
 
+  //Add new item
   @IBAction func addItem() {
-
+    userInputAlert("Add ToDo Item") { (text) in
+      ToDoItem.add(text: text)
+      //self.tableView.reloadData()
+    }
+  }
+  
+  func toggleItem(_ item: ToDoItem) {
+    item.toggleCompleted()
+  }
+  
+  func deleteItem(_ item: ToDoItem) {
+    item.delete()
+  }
+  
+  // MARK: - PRIVATE
+  
+  /// Выводит в консоль дирректорию Documents приложения
+  func printAppDocumentsDirectory() {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    print("DOCUMENTS PATH: \(paths[0])")
   }
 }
 
@@ -69,8 +103,8 @@ extension ToDoListController {
         return ToDoTableViewCell(frame: .zero)
     }
 
-    cell.configureWith(item) { [weak self] item in
-
+    cell.configureWith(item) { item in
+      self.toggleItem(item)
     }
 
     return cell
@@ -86,7 +120,8 @@ extension ToDoListController {
 
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     guard let item = items?[indexPath.row],
-          editingStyle == .delete else { return }
+          editingStyle == .delete else {return }
+    deleteItem(item)
 
   }
 }
