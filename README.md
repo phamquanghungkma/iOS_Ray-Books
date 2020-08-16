@@ -119,11 +119,11 @@ Actions after tapping PUSH message
 
 >## <a name="Ray_Realm"></a> Ray_Realm
 ### 01_Playgrounds
-+ ObjectsAndDataPG
-Типы хранимых данных в Realm   
++ ObjectsAndDataPG   
+Типы хранимых данных в Realm      
 Инициализация обьектов класса
 
-+ CarRepairPG
++ CarRepairPG   
 Взаимосвязи между Realm классами
 
 ### 02_MyToDo
