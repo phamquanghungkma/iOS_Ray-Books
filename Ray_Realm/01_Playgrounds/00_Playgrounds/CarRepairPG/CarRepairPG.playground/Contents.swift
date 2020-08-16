@@ -1,6 +1,10 @@
 import Foundation
 import RealmSwift
 
+// Setup
+let realm = try! Realm(configuration:
+  Realm.Configuration(inMemoryIdentifier: "TemporaryRealm"))
+
 print("Ready to play!")
 
 class Person: Object {
@@ -135,8 +139,16 @@ class Sticker: Object {
 
 Example.of("Referencing objects from a different Realm file") {
     // Let's say we're storing those in "stickers.realm"
-    let sticker = Sticker("Swift is my life")
-    car.stickers.append(sticker.id)
-    print(car.stickers)
+//    let sticker = Sticker("Swift is my life")
+//    car.stickers.append(sticker.id)
+//    print(car.stickers)
+//
+//    try! realm.write {
+//        realm.add(car)
+//        realm.add(sticker)
+//    }
+//    print("Linked stickers:")
+//    print(realm.objects(Sticker.self)
+//        .filter("id IN %@", car.stickers))
 }
 
