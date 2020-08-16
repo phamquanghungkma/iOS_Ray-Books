@@ -82,4 +82,12 @@ extension ToDoItem {
       realm.delete(self)
     }
   }
+  
+  //Edit Task
+  func edit(editedText: String) {
+    guard let realm = realm else { return }
+    try! realm.write {
+      self.text = editedText
+    }
+  }
 }

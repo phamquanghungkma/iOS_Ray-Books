@@ -69,7 +69,6 @@ class ToDoListController: UITableViewController {
   @IBAction func addItem() {
     userInputAlert("Add ToDo Item") { (text) in
       ToDoItem.add(text: text)
-      //self.tableView.reloadData()
     }
   }
   
@@ -79,6 +78,10 @@ class ToDoListController: UITableViewController {
   
   func deleteItem(_ item: ToDoItem) {
     item.delete()
+  }
+  
+  func editItem(_ item: ToDoItem, newText: String) {
+    item.edit(editedText: newText)
   }
   
   // MARK: - PRIVATE
@@ -115,13 +118,23 @@ extension ToDoListController {
 
 extension ToDoListController {
   override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    guard
+      let item = items?[indexPath.row],
+      item.isCompleted else { return false }
     return true
   }
 
   override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    guard let item = items?[indexPath.row],
-          editingStyle == .delete else {return }
+    guard
+      let item = items?[indexPath.row],
+      editingStyle == .delete else { return }
     deleteItem(item)
-
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let item = items?[indexPath.row] else { return }
+    userEditAlert(item: item) { (newText) in
+      self.editItem(item, newText: newText)
+    }
   }
 }
