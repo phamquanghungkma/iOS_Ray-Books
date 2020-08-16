@@ -121,6 +121,10 @@ Actions after tapping PUSH message
 ### 01_MyToDo
 Базовые действия с Realm - создание сущности/добавление/удаление/изменение
 
+### 02_ObjectsAndData
+Типы хранимых данных в Realm   
+Инициализация обьектов класса
+
 <br />
 <br />
 
