@@ -53,3 +53,24 @@ class Car: Object {
         self.year = year
     }
 }
+
+
+//MARK: - CHALLENGE
+
+class Sale: Object {
+    @objc dynamic var saleDate = Date.distantPast
+    @objc dynamic var saleValue = 0
+    @objc dynamic var saleMan: Person?
+}
+
+class Person: Object {
+    @objc dynamic var name = ""
+    let sailedCars = LinkingObjects(fromType: Sale.self, property: "saleMan")
+    let bonuses = List<Double>()
+}
+
+class Store: Object {
+    @objc dynamic var storeName = ""
+    let carsOnSale = List<Car>()
+    let workers = List<Person>()
+}
