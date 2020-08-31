@@ -3,6 +3,7 @@ Raywenderlich Tutorial Team Book's
 
 + [Ray_AutoLayout ](#Ray_AutoLayout)
 + [Ray_Concurrency](#Ray_Concurrency)
++ [Ray_Patterns](#Ray_Patterns)
 + [Ray_PushNotifications](#Ray_PushNotifications)
 + [Ray_Realm](#Ray_Realm)
 
@@ -79,6 +80,16 @@ Priority Inversion Problem
 
 ### 06_Sanitizer
 Анализируем потоки
+
+<br />
+<br />
+
+>## <a name="Ray_Patterns"></a> Ray_Patterns
+### 01_Playgrounds
+Patterns Overview
+
+### 02_RabbleWabble
+Приложение на структурном шаблоне MVC
 
 <br />
 <br />
