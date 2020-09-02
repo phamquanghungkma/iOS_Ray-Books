@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2019 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,6 @@
 import UIKit
 
 public class QuestionGroupCell: UITableViewCell {
-    @IBOutlet public var titleLabel: UILabel!
-    @IBOutlet public var percentageLabel: UILabel!
+  @IBOutlet public var titleLabel: UILabel!
+  @IBOutlet public var percentageLabel: UILabel!
 }

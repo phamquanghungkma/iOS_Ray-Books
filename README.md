@@ -89,7 +89,8 @@ Priority Inversion Problem
 Patterns Overview
 
 ### 02_RabbleWabble
-Приложение на структурном шаблоне MVC
+Приложение на структурном шаблоне MVC   
+Delegates Pattern
 
 <br />
 <br />

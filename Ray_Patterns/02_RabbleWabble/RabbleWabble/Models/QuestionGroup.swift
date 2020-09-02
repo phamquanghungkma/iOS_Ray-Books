@@ -26,6 +26,8 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Foundation
+
 public struct QuestionGroup {
   public let questions: [Question]
   public let title: String
