@@ -17,6 +17,9 @@
 		425C94B822EF3314007B51EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425C94B722EF3314007B51EE /* Assets.xcassets */; };
 		425C94BA22EF3328007B51EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425C94B922EF3327007B51EE /* LaunchScreen.storyboard */; };
 		425C94BC22EF3371007B51EE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425C94BB22EF3371007B51EE /* QuestionView.swift */; };
+		42F1447022F2DDA80071A707 /* QuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1446F22F2DDA80071A707 /* QuestionStrategy.swift */; };
+		42F1447222F2DDCC0071A707 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1447122F2DDCC0071A707 /* SequentialQuestionStrategy.swift */; };
+		42F1447422F2DDE10071A707 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F1447322F2DDE10071A707 /* RandomQuestionStrategy.swift */; };
 		42FBF7D522EF67CF00186FF0 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBF7D422EF67CF00186FF0 /* SelectQuestionGroupViewController.swift */; };
 		42FBF7D722EF67F900186FF0 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBF7D622EF67F900186FF0 /* QuestionGroupCell.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		425C94B722EF3314007B51EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425C94B922EF3327007B51EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425C94BB22EF3371007B51EE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		42F1446F22F2DDA80071A707 /* QuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategy.swift; sourceTree = "<group>"; };
+		42F1447122F2DDCC0071A707 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
+		42F1447322F2DDE10071A707 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
 		42FBF7D422EF67CF00186FF0 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		42FBF7D622EF67F900186FF0 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,9 +128,20 @@
 				420C7C5222EC8F3700472B72 /* Controllers */,
 				420C7C5322EC8F5900472B72 /* Models */,
 				420C7C5422EC8F5D00472B72 /* Resources */,
+				42F1446E22F2DD960071A707 /* Strategies */,
 				420C7C5522EC8F6200472B72 /* Views */,
 			);
 			path = RabbleWabble;
+			sourceTree = "<group>";
+		};
+		42F1446E22F2DD960071A707 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				42F1446F22F2DDA80071A707 /* QuestionStrategy.swift */,
+				42F1447322F2DDE10071A707 /* RandomQuestionStrategy.swift */,
+				42F1447122F2DDCC0071A707 /* SequentialQuestionStrategy.swift */,
+			);
+			path = Strategies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +221,9 @@
 				425C94BC22EF3371007B51EE /* QuestionView.swift in Sources */,
 				425C94B622EF22BC007B51EE /* QuestionGroupData.swift in Sources */,
 				42FBF7D722EF67F900186FF0 /* QuestionGroupCell.swift in Sources */,
+				42F1447222F2DDCC0071A707 /* SequentialQuestionStrategy.swift in Sources */,
+				42F1447422F2DDE10071A707 /* RandomQuestionStrategy.swift in Sources */,
+				42F1447022F2DDA80071A707 /* QuestionStrategy.swift in Sources */,
 				425C94B422EF21D3007B51EE /* QuestionGroup.swift in Sources */,
 				42FBF7D522EF67CF00186FF0 /* SelectQuestionGroupViewController.swift in Sources */,
 				424452A522EC2AFB001C3BC3 /* SceneDelegate.swift in Sources */,
