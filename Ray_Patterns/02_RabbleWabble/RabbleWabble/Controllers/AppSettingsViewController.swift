@@ -26,46 +26,55 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-public class SequentialQuestionStrategy: QuestionStrategy {
+import UIKit
+
+public class AppSettingsViewController: UITableViewController {
+
   // MARK: - Properties
-  public var correctCount: Int = 0
-  public var incorrectCount: Int = 0
-  private let questionGroup: QuestionGroup
-  private var questionIndex = 0
+  public let appSettings = AppSettings.shared
+  private let cellIdentifier = "basicCell"
   
-  // MARK: - Object Lifecycle
-  public init(questionGroup: QuestionGroup) {
-    self.questionGroup = questionGroup
+  // MARK: - View Life Cycle
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.tableFooterView = UIView()
+    tableView.register(UITableViewCell.self,
+                       forCellReuseIdentifier: cellIdentifier)
+  }
+}
+
+// MARK: - UITableViewDataSource
+extension AppSettingsViewController {
+  
+  public override func tableView(_ tableView: UITableView,
+                                 numberOfRowsInSection section: Int) -> Int {
+    return QuestionStrategyType.allCases.count
   }
   
-  // MARK: - QuestionStrategy
-  public var title: String {
-    return questionGroup.title
-  }
-  
-  public func currentQuestion() -> Question {
-    return questionGroup.questions[questionIndex]
-  }
-  
-  public func advanceToNextQuestion() -> Bool {
-    guard questionIndex + 1 <
-      questionGroup.questions.count else {
-        return false
+  public override func tableView(_ tableView: UITableView,
+                                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(
+      withIdentifier: cellIdentifier, for: indexPath)
+    
+    let questionStrategyType = QuestionStrategyType.allCases[indexPath.row]
+    
+    cell.textLabel?.text = questionStrategyType.title()
+    if appSettings.questionStrategyType == questionStrategyType {
+      cell.accessoryType = .checkmark
+    } else {
+      cell.accessoryType = .none
     }
-    questionIndex += 1
-    return true
+    return cell
   }
-  
-  public func markQuestionCorrect(_ question: Question) {
-    correctCount += 1
-  }
-  
-  public func markQuestionIncorrect(_ question: Question) {
-    incorrectCount += 1
-  }
-  
-  public func questionIndexTitle() -> String {
-    return "\(questionIndex + 1)/" +
-    "\(questionGroup.questions.count)"
+}
+
+// MARK: - UITableViewDelegate
+extension AppSettingsViewController {
+  public override func tableView( _ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let questionStrategyType = QuestionStrategyType.allCases[indexPath.row]
+    appSettings.questionStrategyType = questionStrategyType
+    tableView.reloadData()
   }
 }

@@ -26,46 +26,67 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-public class SequentialQuestionStrategy: QuestionStrategy {
-  // MARK: - Properties
-  public var correctCount: Int = 0
-  public var incorrectCount: Int = 0
-  private let questionGroup: QuestionGroup
-  private var questionIndex = 0
+import Foundation
+
+public class AppSettings {
+  
+  // MARK: - Keys
+  private struct Keys {
+    static let questionStrategy = "questionStrategy"
+  }
+  
+  // MARK: - Static Properties
+  public static let shared = AppSettings()
+  
+  // MARK: - Instance Properties
+  public var questionStrategyType: QuestionStrategyType {
+    get {
+      let rawValue = userDefaults.integer(
+        forKey: Keys.questionStrategy)
+      return QuestionStrategyType(rawValue: rawValue)!
+    } set {
+      userDefaults.set(newValue.rawValue,
+                       forKey: Keys.questionStrategy)
+    }
+  }
+  private let userDefaults = UserDefaults.standard
   
   // MARK: - Object Lifecycle
-  public init(questionGroup: QuestionGroup) {
-    self.questionGroup = questionGroup
-  }
+  private init() { }
   
-  // MARK: - QuestionStrategy
-  public var title: String {
-    return questionGroup.title
+  // MARK: - Instance Methods
+  public func questionStrategy(
+    for questionGroup: QuestionGroup) -> QuestionStrategy {
+    return questionStrategyType.questionStrategy(
+      for: questionGroup)
   }
+}
+
+// MARK: - QuestionStrategyType
+public enum QuestionStrategyType: Int, CaseIterable {
   
-  public func currentQuestion() -> Question {
-    return questionGroup.questions[questionIndex]
-  }
+  case random
+  case sequential
   
-  public func advanceToNextQuestion() -> Bool {
-    guard questionIndex + 1 <
-      questionGroup.questions.count else {
-        return false
+  // MARK: - Instance Methods
+  public func title() -> String {
+    switch self {
+    case .random:
+      return "Random"
+    case .sequential:
+      return "Sequential"
     }
-    questionIndex += 1
-    return true
   }
   
-  public func markQuestionCorrect(_ question: Question) {
-    correctCount += 1
-  }
-  
-  public func markQuestionIncorrect(_ question: Question) {
-    incorrectCount += 1
-  }
-  
-  public func questionIndexTitle() -> String {
-    return "\(questionIndex + 1)/" +
-    "\(questionGroup.questions.count)"
+  public func questionStrategy(
+    for questionGroup: QuestionGroup) -> QuestionStrategy {
+    switch self {
+    case .random:
+      return RandomQuestionStrategy(
+        questionGroup: questionGroup)
+    case .sequential:
+      return SequentialQuestionStrategy(
+        questionGroup: questionGroup)
+    }
   }
 }
