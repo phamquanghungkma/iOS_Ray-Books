@@ -90,8 +90,8 @@ Patterns Overview
 
 ### 02_RabbleWabble
 Приложение на структурном шаблоне MVC   
-Delegates Pattern
-Strategy Pattern
+Delegates Pattern   
+Strategy Pattern   
 Singletone Pattern
 
 <br />
