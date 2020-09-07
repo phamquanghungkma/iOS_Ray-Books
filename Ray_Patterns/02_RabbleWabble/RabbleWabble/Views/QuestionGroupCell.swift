@@ -26,9 +26,12 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
+import Combine
 import UIKit
 
 public class QuestionGroupCell: UITableViewCell {
   @IBOutlet public var titleLabel: UILabel!
   @IBOutlet public var percentageLabel: UILabel!
+  
+  public var percentageSubscriber: AnyCancellable?
 }
