@@ -90,7 +90,7 @@ Patterns Overview
 
 ### 02_RabbleWabble
 Приложение на структурном шаблоне MVC   
-Delegate/Strategy/Singletone/Memento/Observer Patterns
+Delegate/Strategy/Singletone/Memento/Observer/Builder Patterns
 
 <br />
 <br />
