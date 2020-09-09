@@ -96,6 +96,10 @@ Delegate/Strategy/Singletone/Memento/Observer/Builder Patterns
 Приложение на структурном шаблоне MVVM   
 Factory/Adapter/Iterator Patterns
 
+### 04_MirrorPad
+Приложение на структурном шаблоне MVVM   
+Prototype Pattern
+
 <br />
 <br />
 
