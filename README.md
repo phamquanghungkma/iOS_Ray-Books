@@ -94,6 +94,7 @@ Delegate/Strategy/Singletone/Memento/Observer/Builder Patterns
 
 ### 03_CoffeeQuest
 Приложение на структурном шаблоне MVVM   
+Factory/Adapter/Iterator Patterns
 
 <br />
 <br />

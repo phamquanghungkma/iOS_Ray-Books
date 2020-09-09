@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423128912303391200B84BED /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423128902303391200B84BED /* Filter.swift */; };
 		4252EAAA2023E05900847430 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4252EAA92023E05900847430 /* APIKeys.swift */; };
 		42F819F523021A92001B3956 /* YLPClient+BusinessSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F819F423021A92001B3956 /* YLPClient+BusinessSearchClient.swift */; };
 		42F819F723021A9D001B3956 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F819F623021A9D001B3956 /* Business.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0EB69E332F1CF61F584429C4 /* Pods-CoffeeQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeQuest/Pods-CoffeeQuest.release.xcconfig"; sourceTree = "<group>"; };
+		423128902303391200B84BED /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		4252EAA92023E05900847430 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		42F819F423021A92001B3956 /* YLPClient+BusinessSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YLPClient+BusinessSearchClient.swift"; sourceTree = "<group>"; };
 		42F819F623021A9D001B3956 /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				42F819F623021A9D001B3956 /* Business.swift */,
+				423128902303391200B84BED /* Filter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				C35933872023BF5700D85500 /* ViewController.swift in Sources */,
 				C35933852023BF5700D85500 /* AppDelegate.swift in Sources */,
 				42F819F923021AA8001B3956 /* BusinessSearchClient.swift in Sources */,
+				423128912303391200B84BED /* Filter.swift in Sources */,
 				42F819F523021A92001B3956 /* YLPClient+BusinessSearchClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
