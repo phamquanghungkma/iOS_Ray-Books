@@ -114,6 +114,9 @@ Command Pattern
 ### 09_RWSecret
 Chain of Responsibility Pattern
 
+### 10_RayPets
+Coordinator Pattern
+
 <br />
 <br />
 
