@@ -97,7 +97,10 @@ Delegate/Strategy/Singletone/Memento/Observer/Builder Patterns
 Factory/Adapter/Iterator Patterns
 
 ### 04_MirrorPad
-Prototype/Multicast Delegate Patterns
+Prototype/Multicast Delegate/Facade Patterns
+
+### 05_YetiJokes
+Flyweight Pattern
 
 <br />
 <br />
