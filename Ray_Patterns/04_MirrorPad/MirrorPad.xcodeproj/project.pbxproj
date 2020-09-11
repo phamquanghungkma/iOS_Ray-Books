@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		423B89D022FB35190048966C /* DrawingSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 423B89CF22FB35190048966C /* DrawingSelectionViewController.xib */; };
+		423B89D322FB35290048966C /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B89D122FB35290048966C /* ImageRenderer.swift */; };
+		423B89D422FB35290048966C /* DrawingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B89D222FB35290048966C /* DrawingSelectionViewController.swift */; };
+		423B89D622FB35820048966C /* ShareFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423B89D522FB35820048966C /* ShareFacade.swift */; };
 		424387E420449D300056B653 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424387E320449D300056B653 /* DrawView.swift */; };
 		424387E72044A1ED0056B653 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424387E62044A1ED0056B653 /* LineShape.swift */; };
 		427FB70422FB2B4D00699DDF /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FB70322FB2B4D00699DDF /* MulticastDelegate.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		423B89CF22FB35190048966C /* DrawingSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawingSelectionViewController.xib; sourceTree = "<group>"; };
+		423B89D122FB35290048966C /* ImageRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRenderer.swift; sourceTree = "<group>"; };
+		423B89D222FB35290048966C /* DrawingSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingSelectionViewController.swift; sourceTree = "<group>"; };
+		423B89D522FB35820048966C /* ShareFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareFacade.swift; sourceTree = "<group>"; };
 		424387E320449D300056B653 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		424387E62044A1ED0056B653 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		427FB70322FB2B4D00699DDF /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +73,9 @@
 		4245EC7C2074417100E347D0 /* Facades */ = {
 			isa = PBXGroup;
 			children = (
+				423B89D222FB35290048966C /* DrawingSelectionViewController.swift */,
+				423B89D122FB35290048966C /* ImageRenderer.swift */,
+				423B89D522FB35820048966C /* ShareFacade.swift */,
 			);
 			path = Facades;
 			sourceTree = "<group>";
@@ -141,6 +152,7 @@
 		42F35C4920449CAA00584FAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				423B89CF22FB35190048966C /* DrawingSelectionViewController.xib */,
 				42F2A34322FB1A9900FB4283 /* DrawView */,
 				42F35C3E20449C9A00584FAD /* LaunchScreen.storyboard */,
 				42F35C3920449C9A00584FAD /* Main.storyboard */,
@@ -217,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423B89D022FB35190048966C /* DrawingSelectionViewController.xib in Resources */,
 				42F35C4020449C9A00584FAD /* LaunchScreen.storyboard in Resources */,
 				42F35C3D20449C9A00584FAD /* Assets.xcassets in Resources */,
 				42F35C3B20449C9A00584FAD /* Main.storyboard in Resources */,
@@ -231,9 +244,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				42F2A34822FB1AB200FB4283 /* AnimateState.swift in Sources */,
+				423B89D622FB35820048966C /* ShareFacade.swift in Sources */,
 				42F35C3820449C9A00584FAD /* ViewController.swift in Sources */,
 				42F2A34C22FB1ABE00FB4283 /* CopyState.swift in Sources */,
 				424387E72044A1ED0056B653 /* LineShape.swift in Sources */,
+				423B89D322FB35290048966C /* ImageRenderer.swift in Sources */,
+				423B89D422FB35290048966C /* DrawingSelectionViewController.swift in Sources */,
 				42F2A34E22FB1AC300FB4283 /* DrawViewState.swift in Sources */,
 				42F2A34A22FB1AB800FB4283 /* ClearState.swift in Sources */,
 				4286057822F9F46000B7CB17 /* Copying.swift in Sources */,
