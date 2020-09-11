@@ -13,8 +13,6 @@
  
  ## Code Example
  */
-import Foundation
-
 protocol File {
   var name: String { get set }
   func open()

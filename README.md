@@ -108,6 +108,9 @@ Mediator Pattern
 ### 07_DefeatYourToDoList
 Composite Pattern
 
+### 08_RayWenToe
+Command Pattern
+
 <br />
 <br />
 

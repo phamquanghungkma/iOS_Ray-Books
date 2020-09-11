@@ -27,20 +27,20 @@
 /// THE SOFTWARE.
 
 open class Mediator<ColleagueType> {
-  
+
   private class ColleagueWrapper {
     var strongColleague: AnyObject?
     weak var weakColleague: AnyObject?
-    
+
     var colleague: ColleagueType? {
       return (weakColleague ?? strongColleague) as? ColleagueType
     }
-    
+
     init(weakColleague: ColleagueType) {
       self.strongColleague = nil
       self.weakColleague = weakColleague as AnyObject
     }
-    
+
     init(strongColleague: ColleagueType) {
       self.strongColleague = strongColleague  as AnyObject
       self.weakColleague = nil
@@ -59,7 +59,7 @@ open class Mediator<ColleagueType> {
     }
     return colleagues
   }
-  
+
   // MARK: - Object Lifecycle
   public init() { }
   
@@ -74,9 +74,9 @@ open class Mediator<ColleagueType> {
     }
     colleagueWrappers.append(wrapper)
   }
-  
+
   public func removeColleague(_ colleague: ColleagueType) {
-    guard let index = colleagues.index(where: {
+    guard let index = colleagues.firstIndex(where: {
       ($0 as AnyObject) === (colleague as AnyObject)
     }) else { return }
     colleagueWrappers.remove(at: index)
@@ -85,7 +85,7 @@ open class Mediator<ColleagueType> {
   public func invokeColleagues(closure: (ColleagueType) -> Void) {
     colleagues.forEach(closure)
   }
-  
+
   public func invokeColleagues(by colleague: ColleagueType,
                                closure: (ColleagueType) -> Void) {
     colleagues.forEach {
