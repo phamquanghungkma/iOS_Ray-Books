@@ -11,7 +11,6 @@
  
  ## Code Example
  */
-
 import UIKit
 
 let red = UIColor.red
@@ -23,9 +22,9 @@ let color2 = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
 print(color === color2) // proves this is NOT a flyweight
 
 extension UIColor {
-  //1. You created a dictionary called colorStore to store RGBA values.
+  
   public static var colorStore: [String: UIColor] = [:]
-  //2. You wrote your own method that takes red green, blue and alpha like the UIColor method. You store the RGB values in a string called key. If a color with that key already exists in colorStore, use that one instead of creating a new one.
+  
   public class func rgba(_ red: CGFloat,
                          _ green: CGFloat,
                          _ blue: CGFloat,
@@ -35,7 +34,7 @@ extension UIColor {
     if let color = colorStore[key] {
       return color
     }
-    //3. If the key does not already exist in the colorStore, create the UIColor and store it along with its key.
+    
     let color = UIColor(red: red,
                         green: green,
                         blue: blue,

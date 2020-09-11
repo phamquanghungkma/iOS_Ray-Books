@@ -102,6 +102,9 @@ Prototype/Multicast Delegate/Facade Patterns
 ### 05_YetiJokes
 Flyweight Pattern
 
+### 06_YetiDate
+Mediator Pattern
+
 <br />
 <br />
 
