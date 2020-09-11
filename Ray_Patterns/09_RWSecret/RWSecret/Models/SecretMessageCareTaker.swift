@@ -26,26 +26,17 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-public protocol Router: class {
-  
-  func present(_ viewController: UIViewController,
-                animated: Bool)
-                
-  func present(_ viewController: UIViewController,
-               animated: Bool,
-               onDismissed: (()->Void)?)
-  
-  func dismiss(animated: Bool)
-}
+public class SecretMessageCareTaker {
 
-extension Router {
-  
-  public func present(_ viewController: UIViewController,
-                      animated: Bool) {
-    present(viewController,
-            animated: animated,
-            onDismissed: nil)
+  public let messages: [SecretMessage]
+
+  // MARK: - Object Lifecycle
+  public init() {
+    let url = Bundle.main.url(forResource: "SecretMessages", withExtension: "json")!
+    let data = try! Data(contentsOf: url)
+    let decoder = JSONDecoder()
+    self.messages = try! decoder.decode(Array<SecretMessage>.self, from: data)
   }
 }

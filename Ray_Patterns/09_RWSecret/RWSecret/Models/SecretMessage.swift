@@ -26,26 +26,13 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-public protocol Router: class {
-  
-  func present(_ viewController: UIViewController,
-                animated: Bool)
-                
-  func present(_ viewController: UIViewController,
-               animated: Bool,
-               onDismissed: (()->Void)?)
-  
-  func dismiss(animated: Bool)
-}
+public class SecretMessage: Codable {
+  public let encrypted: String
+  public var decrypted: String?
 
-extension Router {
-  
-  public func present(_ viewController: UIViewController,
-                      animated: Bool) {
-    present(viewController,
-            animated: animated,
-            onDismissed: nil)
+  public init(encrypted: String) {
+    self.encrypted = encrypted
   }
 }

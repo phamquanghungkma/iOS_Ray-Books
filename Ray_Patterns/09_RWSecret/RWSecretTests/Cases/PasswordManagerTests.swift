@@ -26,26 +26,43 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+// MARK: - Test Module
+@testable import RWSecret
 
-public protocol Router: class {
-  
-  func present(_ viewController: UIViewController,
-                animated: Bool)
-                
-  func present(_ viewController: UIViewController,
-               animated: Bool,
-               onDismissed: (()->Void)?)
-  
-  func dismiss(animated: Bool)
-}
+// MARK: - Collaborators
+import RNCryptor
 
-extension Router {
-  
-  public func present(_ viewController: UIViewController,
-                      animated: Bool) {
-    present(viewController,
-            animated: animated,
-            onDismissed: nil)
+// MARK: - Test Support
+import XCTest
+
+class PasswordManagerTests: XCTestCase {
+
+  // MARK: - Instance Variables
+  var sut: PasswordClient!
+  let password = "password"
+
+  // MARK: - Test Lifecycle
+  override func setUp() {
+    super.setUp()
+    sut = PasswordClient()
+    sut.addPassword(password)
+  }
+
+  override func tearDown() {
+    sut.passwords.forEach { sut.removePassword($0) }
+    super.tearDown()
+  }
+
+  // MARK: - Password Management - Tests
+  func test_addPassword_appendsTo_passwords() {
+    XCTAssertTrue(sut.passwords.contains(password))
+  }
+
+  func test_removePassword_removesFrom_passwords() {
+    // when
+    sut.removePassword(password)
+
+    // then
+    XCTAssertFalse(sut.passwords.contains(password))
   }
 }

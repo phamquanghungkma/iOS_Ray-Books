@@ -28,24 +28,54 @@
 
 import UIKit
 
-public protocol Router: class {
-  
-  func present(_ viewController: UIViewController,
-                animated: Bool)
-                
-  func present(_ viewController: UIViewController,
-               animated: Bool,
-               onDismissed: (()->Void)?)
-  
-  func dismiss(animated: Bool)
+public class PasswordViewController: UIViewController {
+
+  // MARK: - Outlets
+  @IBOutlet public var tableView: UITableView!
+  @IBOutlet public var textField: UITextField!
+
+  // MARK: - Instance Properties
+  public var passwordClient: PasswordClient!
 }
 
-extension Router {
-  
-  public func present(_ viewController: UIViewController,
-                      animated: Bool) {
-    present(viewController,
-            animated: animated,
-            onDismissed: nil)
+// MARK: - Actions
+extension PasswordViewController {
+
+  @IBAction internal func addPasswordPressed(_ sender: Any) {
+    guard let password = textField.text, !password.isEmpty else { return }
+    passwordClient.addPassword(password)
+    textField.text = nil
+    tableView.reloadData()
+  }
+}
+
+// MARK: - UITableViewDataSource
+extension PasswordViewController: UITableViewDataSource {
+
+  public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return passwordClient.passwords.count
+  }
+
+  public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "PasswordCell")!
+    cell.textLabel?.text = passwordClient.passwords[indexPath.row]
+    return cell
+  }
+
+  public func tableView(_ tableView: UITableView,
+                        commit editingStyle: UITableViewCell.EditingStyle,
+                        forRowAt indexPath: IndexPath) {
+    guard editingStyle == .delete else { return }
+    passwordClient.removePassword(at: indexPath.row)
+    tableView.reloadData()
+  }
+}
+
+// MARK: - UITextFieldDelegate
+extension PasswordViewController: UITextFieldDelegate {
+
+  public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return false
   }
 }

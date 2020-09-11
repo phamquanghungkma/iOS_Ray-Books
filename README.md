@@ -111,6 +111,9 @@ Composite Pattern
 ### 08_RayWenToe
 Command Pattern
 
+### 09_RWSecret
+Chain of Responsibility Pattern
+
 <br />
 <br />
 
