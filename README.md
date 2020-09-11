@@ -105,6 +105,9 @@ Flyweight Pattern
 ### 06_YetiDate
 Mediator Pattern
 
+### 07_DefeatYourToDoList
+Composite Pattern
+
 <br />
 <br />
 
