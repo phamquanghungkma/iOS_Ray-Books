@@ -26,36 +26,51 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+public class MulticastDelegate<ProtocolType> {
 
-public class ViewController: UIViewController {
+  // MARK: - DelegateWrapper
+  private class DelegateWrapper {
 
-  // MARK: - Outlets
-  @IBOutlet public var drawViewContainer: UIView!
-  @IBOutlet public var inputDrawView: DrawView!
-  @IBOutlet public var mirrorDrawViews: [DrawView]!
-  
-  // MARK: - View Lifecycle
-  public override func viewDidLoad() {
-    super.viewDidLoad()
-    mirrorDrawViews.forEach {
-      inputDrawView.addDelegate($0)
+    weak var delegate: AnyObject?
+
+    init(_ delegate: AnyObject) {
+      self.delegate = delegate
     }
   }
+  
+  // MARK: - Instance Properties
+  private var delegateWrappers: [DelegateWrapper]
 
-  // MARK: - Actions
-  @IBAction public func animatePressed(_ sender: Any) {
-    mirrorDrawViews.forEach { $0.copyLines(from: inputDrawView) }
-    mirrorDrawViews.forEach { $0.animate() }
-    inputDrawView.animate()
+  public var delegates: [ProtocolType] {
+    delegateWrappers = delegateWrappers
+      .filter { $0.delegate != nil }
+    return delegateWrappers.map
+      { $0.delegate! } as! [ProtocolType]
   }
 
-  @IBAction public func clearPressed(_ sender: Any) {
-    inputDrawView.clear()
-    mirrorDrawViews.forEach { $0.clear() }
+  // MARK: - Object Lifecycle
+  public init(delegates: [ProtocolType] = []) {
+    delegateWrappers = delegates.map {
+      DelegateWrapper($0 as AnyObject)
+    }
+  }
+  
+  // MARK: - Delegate Management
+  public func addDelegate(_ delegate: ProtocolType) {
+    let wrapper = DelegateWrapper(delegate as AnyObject)
+    delegateWrappers.append(wrapper)
   }
 
-  @IBAction public func sharePressed(_ sender: Any) {
-
+  public func removeDelegate(_ delegate: ProtocolType) {
+    guard let index = delegateWrappers.firstIndex(where: {
+      $0.delegate === (delegate as AnyObject)
+    }) else {
+      return
+    }
+    delegateWrappers.remove(at: index)
+  }
+  
+  public func invokeDelegates(_ closure: (ProtocolType) -> ()) {
+    delegates.forEach { closure($0) }
   }
 }

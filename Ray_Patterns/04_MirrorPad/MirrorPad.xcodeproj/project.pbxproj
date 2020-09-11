@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		424387E420449D300056B653 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424387E320449D300056B653 /* DrawView.swift */; };
 		424387E72044A1ED0056B653 /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424387E62044A1ED0056B653 /* LineShape.swift */; };
+		427FB70422FB2B4D00699DDF /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427FB70322FB2B4D00699DDF /* MulticastDelegate.swift */; };
 		4286057822F9F46000B7CB17 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4286057722F9F46000B7CB17 /* Copying.swift */; };
 		42F2A34622FB1AAC00FB4283 /* AcceptInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2A34522FB1AAC00FB4283 /* AcceptInputState.swift */; };
 		42F2A34822FB1AB200FB4283 /* AnimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2A34722FB1AB200FB4283 /* AnimateState.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		424387E320449D300056B653 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		424387E62044A1ED0056B653 /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
+		427FB70322FB2B4D00699DDF /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		4286057722F9F46000B7CB17 /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
 		42F2A34522FB1AAC00FB4283 /* AcceptInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptInputState.swift; sourceTree = "<group>"; };
 		42F2A34722FB1AB200FB4283 /* AnimateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateState.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				4286057722F9F46000B7CB17 /* Copying.swift */,
+				427FB70322FB2B4D00699DDF /* MulticastDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				42F2A34A22FB1AB800FB4283 /* ClearState.swift in Sources */,
 				4286057822F9F46000B7CB17 /* Copying.swift in Sources */,
 				42F35C3620449C9A00584FAD /* AppDelegate.swift in Sources */,
+				427FB70422FB2B4D00699DDF /* MulticastDelegate.swift in Sources */,
 				42F2A34622FB1AAC00FB4283 /* AcceptInputState.swift in Sources */,
 				424387E420449D300056B653 /* DrawView.swift in Sources */,
 			);
