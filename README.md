@@ -6,6 +6,7 @@ Raywenderlich Tutorial Team Book's
 + [Ray_Patterns](#Ray_Patterns)
 + [Ray_PushNotifications](#Ray_PushNotifications)
 + [Ray_Realm](#Ray_Realm)
++ [Ray_RxSwift](#Ray_RxSwift)
 
 <br />
 <br />
@@ -173,6 +174,15 @@ Actions after tapping PUSH message
 <br />
 <br />
 
+>## <a name="Ray_RxSwift"></a> Ray_RxSwift
+### 01_Playgrounds
+Теория по Observable/Subjects/Operators
+
+### 02_Combinestagram
+Проект создания коллажей из фото устройства на Rx.  
+Photos/BehaviorRelay/PublishSubject/Observable
+
+
 Waiting List 
 =========================
 
@@ -194,15 +204,3 @@ Extension для UIColor
 Работа с разными типами NSFetchRequest   
 Фильтрация данных при запросе к CoreData   
 Знакомство с NSBatchUpdateRequest/NSBatchDeleteReques
-
-<br />
-<br />
-
->## <a name="Ray_RxSwift"></a> Ray_RxSwift
-### 01_Playgrounds
-Теория по Observable/Subjects/Operators
-
-### 02_Combinestagram
-Проект создания коллажей из фото устройства на Rx.  
-Photos/BehaviorRelay/PublishSubject/Observable
-
