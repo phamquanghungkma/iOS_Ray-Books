@@ -182,6 +182,9 @@ Actions after tapping PUSH message
 Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
 
+### 03_GitFeed
+Filtering Operators 
+
 <br />
 <br />
 
