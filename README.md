@@ -182,6 +182,8 @@ Actions after tapping PUSH message
 Проект создания коллажей из фото устройства на Rx.  
 Photos/BehaviorRelay/PublishSubject/Observable
 
+<br />
+<br />
 
 Waiting List 
 =========================
