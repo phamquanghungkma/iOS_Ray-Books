@@ -67,10 +67,10 @@
 		274F2A1B248527D10004AFDC /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				27F2F928248FA33300029E46 /* Transforming.playground */,
-				273BFA04248A205200B993D0 /* Filtering.playground */,
 				27D08C7E24894A2800295D26 /* Observable.playground */,
 				27D08C7D24894A2800295D26 /* Subjects.playground */,
+				27F2F928248FA33300029E46 /* Transforming.playground */,
+				273BFA04248A205200B993D0 /* Filtering.playground */,
 				274F2A1C248527D10004AFDC /* AppDelegate.swift */,
 				274F2A1E248527D10004AFDC /* SceneDelegate.swift */,
 				274F2A20248527D10004AFDC /* ViewController.swift */,
