@@ -33,6 +33,8 @@
 		27F2F928248FA33300029E46 /* Transforming.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Transforming.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2AA1D1F94DA4F98B13C27DE6 /* Pods_Playgrounds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Playgrounds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83425815251A362300E88754 /* Combining.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Combining.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		83FF994F251B38670061ED80 /* TimeBased.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBased.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		83FF9951251B44080061ED80 /* TimeBasedEasy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBasedEasy.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,8 @@
 				273BFA04248A205200B993D0 /* Filtering.playground */,
 				27F2F928248FA33300029E46 /* Transforming.playground */,
 				83425815251A362300E88754 /* Combining.playground */,
+				83FF9951251B44080061ED80 /* TimeBasedEasy.playground */,
+				83FF994F251B38670061ED80 /* TimeBased.playground */,
 				274F2A1C248527D10004AFDC /* AppDelegate.swift */,
 				274F2A1E248527D10004AFDC /* SceneDelegate.swift */,
 				274F2A20248527D10004AFDC /* ViewController.swift */,
