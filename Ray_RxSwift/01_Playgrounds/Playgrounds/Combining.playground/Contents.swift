@@ -63,7 +63,7 @@ example(of: "merge") {
     
     // 3
     let observable = source.merge()
-    let disposable = observable.subscribe(onNext: { value in
+    let _ = observable.subscribe(onNext: { value in
         print(value)
     })
     
@@ -94,7 +94,7 @@ example(of: "combineLatest") {
         strings in strings.joined(separator: " ")
     }
     
-    let disposable = observable.subscribe(onNext: { value in
+    let _ = observable.subscribe(onNext: { value in
         print(value)
     })
     
@@ -171,7 +171,7 @@ example(of: "amb") {
     
     // 1
     let observable = left.amb(right)
-    let disposable = observable.subscribe(onNext: { value in
+    let _ = observable.subscribe(onNext: { value in
         print(value)
     })
     
@@ -242,6 +242,34 @@ example(of: "scan") {
     })
 }
 
+
+
+
+//MARK: - CHALLENGE
+
+example(of: "Challenge 1 - solution using zip") {
+    let source = Observable.of(1, 3, 5, 7, 9)
+    
+    let scanObservable = source.scan(0, accumulator: +)
+    let observable = Observable.zip(source, scanObservable)
+
+    _ = observable.subscribe(onNext: { tuple in
+        print("Value = \(tuple.0)   Running total = \(tuple.1)")
+    })
+}
+
+example(of: "Challenge 1 - solution using just scan and a tuple") {
+    let source = Observable.of(1, 3, 5, 7, 9)
+    
+    let observable = source.scan((0, 0)) { acc, current in
+        return (current, acc.1 + current)
+    }
+
+    _ = observable.subscribe(onNext: { tuple in
+        print("Value = \(tuple.0)   Running total = \(tuple.1)")
+    })
+}
+
 /*:
  Copyright (c) 2019 Razeware LLC
  
@@ -270,4 +298,8 @@ example(of: "scan") {
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
+ */
+
+/*
+ 
  */
