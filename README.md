@@ -197,6 +197,9 @@ Work with Schedulers
 ### 07_Testing
 Work with RxTest/RxBlocking
 
+### 08_iGif
+Reactive extensions
+
 <br />
 <br />
 
