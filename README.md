@@ -194,6 +194,9 @@ Work with RxCocoa
 ### 06_Schedulers
 Work with Schedulers
 
+### 07_Testing
+Work with RxTest/RxBlocking
+
 <br />
 <br />
 
