@@ -29,7 +29,7 @@ _ = sourceObservable.subscribe(sourceTimeline)
 _ = Observable<Int>
   .timer(3, scheduler: MainScheduler.instance)
   .flatMap { _ in
-    sourceObservable.delay(.seconds(delayInSeconds)), scheduler: MainScheduler.instance)
+    sourceObservable.delay(.seconds(Int(delayInSeconds)), scheduler: MainScheduler.instance)
   }
   .subscribe(delayedTimeline)
 

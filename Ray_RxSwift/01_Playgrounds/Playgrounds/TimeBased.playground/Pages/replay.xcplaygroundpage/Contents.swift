@@ -9,7 +9,6 @@ let replayDelay: TimeInterval = 3
 
 let sourceObservable = Observable<Int>
     .interval(.seconds(2), scheduler: MainScheduler.instance)
-    //.interval(1.0 / Double(elementsPerSecond), scheduler: MainScheduler.instance)
     .replay(replayedElements)
 
 let sourceTimeline = TimelineView<Int>.make()

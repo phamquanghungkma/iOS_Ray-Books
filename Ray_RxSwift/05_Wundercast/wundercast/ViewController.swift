@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         }
 
         print("== retrying after \(attempt + 1) seconds ==")
-        return Observable<Int>.timer(.seconds(Int(attempt + 1)),
+        return Observable<Int>.timer(Double(attempt + 1),
                                      scheduler: MainScheduler.instance)
                               .take(1)
       }
@@ -215,13 +215,13 @@ class ViewController: UIViewController {
 
 // MARK: - Solution
 
-extension ObservableType where Element == Weather {
+extension ObservableType where E == Weather {
   /// Custom cache operator
-  func cache(key: String, displayErrorIn viewController: UIViewController) -> Observable<Element> {
+  func cache(key: String, displayErrorIn viewController: UIViewController) -> Observable<E> {
     return self
       .observeOn(MainScheduler.instance)
       .do(onNext: { data in
-        //cachedData[key] = data
+        cachedData[key] = data
       },
       onError: { e in
         guard let e = e as? ApiController.ApiError else {

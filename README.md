@@ -191,6 +191,9 @@ Networking with Rx
 ### 05_Wundercast
 Work with RxCocoa
 
+### 06_Schedulers
+Work with Schedulers
+
 <br />
 <br />
 
