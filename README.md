@@ -200,6 +200,12 @@ Work with RxTest/RxBlocking
 ### 08_iGif
 Reactive extensions
 
+### 09_Tweetie
+MVVM Pattern with Rx
+
+### 10_QuickTodo
+Final App with Rx
+
 <br />
 <br />
 
