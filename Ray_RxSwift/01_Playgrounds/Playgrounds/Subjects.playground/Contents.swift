@@ -3,10 +3,8 @@ import RxSwift
 import RxCocoa
 
 example(of: "PublishSubject") {
-    //Субьект подписанный на обновления и рассылающй информацию по подписчикам
     let subject = PublishSubject<String>()
     subject.onNext("Is anyone listening?")
-    //Подписчик
     let subscriptionOne = subject
         .subscribe(onNext: { string in
             print(string)
@@ -21,43 +19,27 @@ example(of: "PublishSubject") {
     }
     
     subject.onNext("3")
-    
     subscriptionOne.dispose()
-    
     subject.onNext("4")
-    
-    // 1
     subject.onCompleted()
-    
-    // 2
     subject.onNext("5")
-    
-    // 3
     subscriptionTwo.dispose()
-    
     let disposeBag = DisposeBag()
-    
-    // 4
     subject
         .subscribe {
             print("3)", $0.element ?? $0)
     }
     .disposed(by: disposeBag)
-    
     subject.onNext("?")
 }
 
-// 1
+
 enum MyError: Error {
     case anError
 }
-
-// 2
 func print<T: CustomStringConvertible>(label: String, event: Event<T>) {
     print(label, (event.element ?? event.error) ?? event)
 }
-
-// 3
 example(of: "BehaviorSubject") {
     // 4
     let subject = BehaviorSubject(value: "Initial value")
@@ -71,10 +53,8 @@ example(of: "BehaviorSubject") {
     }
     .disposed(by: disposeBag)
     
-    // 1
     subject.onError(MyError.anError)
     
-    // 2
     subject
         .subscribe {
             print(label: "2)", event: $0)
@@ -135,8 +115,6 @@ example(of: "PublishRelay") {
 }
 
 example(of: "BehaviorRelay") {
-    // 1
-    //let relay = BehaviorRelay(value: "Initial value")
     let relay = BehaviorRelay(value: "")
     let disposeBag = DisposeBag()
     
