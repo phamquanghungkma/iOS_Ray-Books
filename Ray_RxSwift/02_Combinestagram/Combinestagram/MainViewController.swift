@@ -32,9 +32,6 @@ import RxCocoa
 
 class MainViewController: UIViewController {
     
-    //private let bag = DisposeBag()
-    //private let images = Variable<[UIImage]>([])
-    
     @IBOutlet weak var imagePreview: UIImageView!
     @IBOutlet weak var buttonClear: UIButton!
     @IBOutlet weak var buttonSave: UIButton!
